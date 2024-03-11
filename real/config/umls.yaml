@@ -1,0 +1,37 @@
+output_dir: ~/experiments/
+
+dataset:
+  class: UMLS
+  path: ~/datasets/knowledge_graphs/
+
+task:
+  class: KnowledgeGraphCompletion
+  model:
+    class: NBFNet
+    input_dim: 128
+    hidden_dims: [128, 128]
+    message_func: distmult
+    aggregate_func: pna
+    short_cut: no
+    layer_norm: no
+    dependent: no
+    degree: 200
+    activation: sigmoid
+  criterion: bce
+  num_negative: 16
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+
+optimizer:
+  class: AdamW
+  lr: 0.001
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 16
+
+train:
+  num_epoch: 20
+
+metric: hits@1

@@ -1,0 +1,37 @@
+output_dir: ~/experiments/
+
+dataset:
+  class: FAMILY
+  path: ~/datasets/knowledge_graphs/
+
+task:
+  class: KnowledgeGraphCompletion
+  model:
+    class: NBFNet
+    input_dim: 64
+    hidden_dims: [64, 64, 64]
+    message_func: transe
+    aggregate_func: pna
+    short_cut: no
+    layer_norm: no
+    dependent: yes
+    activation: relu
+    degree: 20
+  criterion: bce
+  num_negative: 32
+  strict_negative: yes
+  adversarial_temperature: 1
+  sample_weight: no
+
+optimizer:
+  class: AdamW
+  lr: 1.0e-3
+
+engine:
+  gpus: {{ gpus }}
+  batch_size: 32
+
+train:
+  num_epoch: 10
+
+metric: hits@1
