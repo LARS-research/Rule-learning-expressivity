@@ -1,4 +1,4 @@
-# Neural-KG-expressivity #
+# Understanding Expressivity of Neural KG Reasoning in Rule Structure Learning #
 
 ## Synthetic experiments ##
 
