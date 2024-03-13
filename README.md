@@ -1,4 +1,4 @@
-# Understanding Expressivity of Neural KG Reasoning in Rule Structure Learning #
+# Understanding Expressivity of GNN in Rule Learning #
 
 ## Synthetic experiments ##
 
