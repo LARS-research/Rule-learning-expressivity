@@ -76,7 +76,7 @@ If you find our code useful in your research, please cite the following paper.
 ```bibtex
 @inproceedings{
 qiu2024understanding,
-title={Understanding Expressivity of Neural KG Reasoning from Rule Structure Learning},
+title={Understanding Expressivity of GNN in Rule Learning},
 author={Haiquan Qiu, Yongqi Zhang, Yong Li and Quanming Yao},
 booktitle={The Twelfth International Conference on Learning Representations},
 year={2024},
